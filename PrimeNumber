@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PrimeOrNot
+{
+    class PrimeNumber
+    {
+        static void Main(string[] args)
+        {
+            int Num;
+            Console.WriteLine("Enter Number to check Prime or Not");
+            Num = Convert.ToInt32(Console.ReadLine());
+            if (checkPrime(Num))
+            {
+                Console.WriteLine("PRIME");
+            }
+            else
+            {
+                Console.WriteLine("NOT PRIME");
+            }
+            Console.ReadLine();
+        }
+
+        public  static bool checkPrime(int NUM)
+        {
+            for (int I = 2; I < NUM; I++)
+                if (NUM % I == 0)
+                    return false;
+            return true;
+        }
+    }
+}
